@@ -1,0 +1,8 @@
+.buttons {
+    background-color : #4CAF;
+    display: block;
+    height: 10em;
+    width: 10em;
+    text-align: center;
+    color: white;
+}
