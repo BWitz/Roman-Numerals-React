@@ -1,0 +1,21 @@
+div {
+    display: grid;
+}
+
+.Website-Header {
+    display: grid;
+    justify-self: center;
+    padding-top: 10%;
+}
+
+.Number-Input {
+    display: grid;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+}
+
+i {
+    justify-self: center;
+    padding: 3%;
+}

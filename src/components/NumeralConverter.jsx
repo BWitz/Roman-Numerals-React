@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useReducer } from 'react'
+import React, { useState} from 'react'
 import Romannumeral from './Romannumeral'
+import '../styles/NumeralConverter.css';
 
 export default function Numeralconverter() {
 
@@ -7,8 +8,10 @@ export default function Numeralconverter() {
     const [romanNum, setRomanNum] = useState("");
 
     const inputHandler = (e) => {
-        setInput(e.target.value);
-        setRomanNum(convertNumber(parseInt(e.target.value), 10))
+        if (e.target.value.length < 9){
+            setInput(e.target.value);
+            setRomanNum(convertNumber(parseInt(e.target.value), 10))
+        }
     }
 
     const convertNumber = (decimal) => {
@@ -39,9 +42,10 @@ export default function Numeralconverter() {
 
     return (
     <div>
-    <h1>Roman Numeral Converter Page</h1>
-        <input type="number" placeholder="Please enter a number!" onChange={e => inputHandler(e)} />
+        <h1 className="Website-Header">Roman Numerals</h1>
+        <i>Numeri Romani pro hodie</i>
         <Romannumeral input={input} romanNum={romanNum} />
+        <input className="Number-Input" type="number" placeholder="Enter A Number Here" onChange={e => inputHandler(e)} />
     </div>
   )
 }
